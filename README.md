@@ -13,7 +13,7 @@
 
 </div>
 
-<p align="center"> A self-hosted version of [Github Trending API](https://github.com/huchenme/github-trending-api)
+<p align="center"> A self-hosted version of https://github.com/huchenme/github-trending-api
     <br> 
 </p>
 
@@ -27,7 +27,7 @@
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Installing
 
