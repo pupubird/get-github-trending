@@ -12,13 +12,7 @@ function validatePeriod(period) {
     return !period || ['daily', 'weekly', 'monthly'].includes(period)
 }
 
-exports.validate = (language, spoken_language_code, since) => {
-    return validateLanguages(language) &&
-        validateSpokenLanguagesCode(spoken_language_code) &&
-        validatePeriod(since)
-}
-
-module.exports = (req, res, next) => {
+let expressValidate = (req, res, next) => {
     const query = req.query;
 
     if (validateLanguages(query['language']) &&
@@ -26,4 +20,16 @@ module.exports = (req, res, next) => {
         validatePeriod(query['since'])) return next()
 
     res.status(400).send()
+}
+
+
+let validate = (language, spoken_language_code, since) => {
+    return validateLanguages(language) &&
+        validateSpokenLanguagesCode(spoken_language_code) &&
+        validatePeriod(since)
+}
+
+module.exports = {
+    validate,
+    default: expressValidate
 }
