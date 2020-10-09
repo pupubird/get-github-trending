@@ -12,7 +12,7 @@ function validatePeriod(period) {
     return !period || ['daily', 'weekly', 'monthly'].includes(period)
 }
 
-module.validate = (language, spoken_language_code, since) => {
+exports.validate = (language, spoken_language_code, since) => {
     return validateLanguages(language) &&
         validateSpokenLanguagesCode(spoken_language_code) &&
         validatePeriod(since)
