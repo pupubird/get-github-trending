@@ -29,7 +29,5 @@ let validate = (language, spoken_language_code, since) => {
         validatePeriod(since)
 }
 
-module.exports = {
-    validate,
-    default: expressValidate
-}
+module.exports = expressValidate;
+module.exports.validate = validate;
