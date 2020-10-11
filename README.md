@@ -26,6 +26,7 @@ Check out the demo here! [https://hackertab.pupubird.com/repositories](https://h
 - [Getting Started](#getting_started)
 - [Deployment](#deployment)
 - [Usage](#usage)
+- [TODO](#todo)
 - [Built Using](#built_using)
 - [Acknowledgments](#acknowledgement)
 
@@ -55,7 +56,16 @@ For nodejs only:
 npm run start
 ```
 
+Go to your localhost and try access to `/repositores`!
+
 For more information on the API, you may refer to [https://github.com/huchenme/github-trending-api](https://github.com/huchenme/github-trending-api) or [https://githubtrendingapi.docs.apiary.io/#](https://githubtrendingapi.docs.apiary.io/#)
+
+## 📃 TODO <a name = "todo"></a>
+
+- [x] Implement core trending repositories API
+- [ ] Implement trending developers API
+- [ ] Implement list of spoken languages API
+- [ ] Implement list of languages API
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
