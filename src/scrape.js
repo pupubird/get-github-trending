@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const cheerio = require('cheerio');
 
-module.exports.developers = async (language = "", since = "") {
+module.exports.developers = async (language = "", since = "") => {
     const url = `https://github.com/trending/developers${language ? `/${language}` : ''}?since=${since}`
     const data = await fetch(url);
     const $ = cheerio.load(await data.text());
