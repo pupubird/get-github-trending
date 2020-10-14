@@ -1,7 +1,7 @@
 const { developers } = require('../src/scrape');
 const { validate } = require('../src/validate');
 
-exports.handler = async (event) => {
+module.exports = async (event) => {
     const { language, since } = event["queryStringParameters"] || { language: "", since: "" };
 
     if (!validate(language, since)) return {

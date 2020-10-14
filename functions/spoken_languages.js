@@ -1,5 +1,5 @@
 const fs = require('fs');
-exports.handler = async (event) => {
+module.exports = async (event) => {
     const data = fs.readFileSync(process.cwd() + '/src/spoken-languages-code.json')
     return {
         statusCode: 200,

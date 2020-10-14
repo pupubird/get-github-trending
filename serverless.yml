@@ -1,0 +1,66 @@
+service: get-github-trending
+
+plugins:
+  - serverless-api-gateway-caching
+
+custom:
+  apiGatewayCaching:
+    enabled: true
+    ttlInSeconds: 3600
+
+provider:
+  name: aws
+  stage: prod
+  region: ap-southeast-1
+  runtime: nodejs12.x
+
+functions:
+  ping:
+    handler: handler.ping
+    events:
+     - http:
+         path: ping
+         method: get
+
+  developers:
+    handler: handler.developers
+    events:
+     - http:
+         path: developers
+         method: get
+         caching:
+          enabled: true
+          cacheKeyParameters:
+            - name: request.querystring.language
+            - name: request.querystring.since
+
+  repositories:
+    handler: handler.repositories
+    events:
+     - http:
+         path: repositories
+         method: get
+         caching:
+          enabled: true
+          cacheKeyParameters:
+            - name: request.querystring.language
+            - name: request.querystring.since
+            - name: request.querystring.spoken_language_code
+
+  languages:
+    handler: handler.languages
+    events:
+     - http:
+         path: languages
+         method: get
+         caching:
+          enabled: true
+
+  spoken_languages:
+    handler: handler.spoken_languages
+    events:
+     - http:
+         path: spoken_languages
+         method: get
+         caching:
+          enabled: true
