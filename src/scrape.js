@@ -43,7 +43,7 @@ module.exports = async (language = "", since = "", spoken_language_code = "") =>
                 .split('\n').join('')
                 .trim();
 
-            const avatar = `https://github.com/${title.split(" / ")[0]}.png?size=40`;
+            const avatar = `https://github.com/${title.split(" / ")[0]}.png?size=120`;
 
             return {
                 title,
