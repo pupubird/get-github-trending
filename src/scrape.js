@@ -23,17 +23,17 @@ module.exports = async (language = "", since = "", spoken_language_code = "") =>
 
             const $details = $repo.find('div');
 
-            const $color = $details.find('.repo-language-color')
-            const color = $color.attr('style') && $color.attr('style').split("#")[1];
+            const $languageColor = $details.find('.repo-language-color')
+            const languageColor = $languageColor.attr('style') && $languageColor.attr('style').split("#")[1];
 
-            const language = $color.next().text();
+            const language = $languageColor.next().text();
 
             const $stars = $details.find('svg[aria-label="star"]');
             const stars = $stars.parent().text()
                 .split('\n').join('')
                 .trim();
 
-            const currentPeriodStar = $details.children().last().text()
+            const currentPeriodStars = $details.children().last().text()
                 .split('\n').join('')
                 .trim()
                 .match(/[0-9]{1,}/)[0]
@@ -46,15 +46,18 @@ module.exports = async (language = "", since = "", spoken_language_code = "") =>
             const avatar = `https://github.com/${title.split(" / ")[0]}.png?size=120`;
 
             return {
-                title,
+                author: title.split(" / ")[0],
+                name: title.split(" / ")[1],
+                languageColor,
                 url,
                 description,
-                color,
                 language,
                 stars,
-                currentPeriodStar,
+                currentPeriodStars,
                 forks,
-                avatar
+                avatar,
+                // TODO: Scrape builtBy
+                builtBy: []
             };
         });
 };
