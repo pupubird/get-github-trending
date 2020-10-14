@@ -63,9 +63,9 @@ For more information on the API, you may refer to [https://github.com/huchenme/g
 ## 📃 TODO <a name = "todo"></a>
 
 - [x] Implement core trending repositories API
-- [ ] Implement trending developers API
-- [ ] Implement list of spoken languages API
-- [ ] Implement list of languages API
+- [x] Implement trending developers API
+- [x] Implement list of spoken languages API
+- [x] Implement list of languages API
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
