@@ -48,6 +48,14 @@ or with docker
 docker build .
 ```
 
+## 🚀 Deployment <a name = "deployment"></a>
+
+This project is configured with [serverless](https://www.serverless.com/), hence simply run:
+
+```bash
+serverless deploy
+```
+
 ## 🎈 Usage <a name="usage"></a>
 
 For nodejs only:

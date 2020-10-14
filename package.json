@@ -17,6 +17,7 @@
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "serverless-api-gateway-caching": "^1.5.1"
   }
 }
