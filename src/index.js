@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const scrape = require('./scrape');
+const { developers } = require('./scrape');
 const validate = require('./validate');
 const fs = require('fs');
 
@@ -15,11 +16,19 @@ app.get('/repositories', async (req, res) => {
 
     res.send(data);
 })
+
+app.get('/developers', async (req, res) => {
+    const { language, since } = req.query;
+    const data = await developers(language, since);
+    res.send(data);
+})
+
 app.get('/languages', async (req, res) => {
     const stream = fs.readFileSync(process.cwd() + '/src/languages.json');
     const languages = JSON.parse(stream)
     res.send(languages)
 })
+
 app.get('/spoken_languages', async (req, res) => {
     const stream = fs.readFileSync(process.cwd() + '/src/spoken-languages-code.json');
     const languages = JSON.parse(stream)
