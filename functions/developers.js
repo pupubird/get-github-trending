@@ -5,6 +5,9 @@ module.exports = async (event) => {
     const { language, since } = event["queryStringParameters"] || { language: "", since: "" };
 
     if (!validate(language, since)) return {
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+        },
         statusCode: 400,
         body: "Bad request",
     }
@@ -12,6 +15,9 @@ module.exports = async (event) => {
     const data = await developers(language, since);
 
     return {
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+        },
         statusCode: 200,
         body: JSON.stringify(data),
     };
