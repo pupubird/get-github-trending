@@ -1,4 +1,4 @@
-# [https://hackertab.pupubird.com/repositories](https://hackertab.pupubird.com/repositories) will no longer be active
+# [https://hackertab.pupubird.com/repositories](https://hackertab.pupubird.com/repositories) will no longer be active as it was attacked by annonymous spam :C
 <div align="center">
 
 # Get Github Trending
