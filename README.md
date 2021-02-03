@@ -1,3 +1,4 @@
+# [https://hackertab.pupubird.com/repositories](https://hackertab.pupubird.com/repositories) will no longer be active
 <div align="center">
 
 # Get Github Trending
