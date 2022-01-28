@@ -4,7 +4,7 @@ module.exports = {
       name: "get-github-trending",
       script: "./src/index.js",
       env: {
-        PORT: 6001,
+        PORT: 7778,
       },
     },
   ],
