@@ -1,0 +1,43 @@
+service: get-github-trending
+
+provider:
+  name: aws
+  stage: prod
+  region: ap-southeast-1
+  runtime: nodejs12.x
+
+functions:
+  ping:
+    handler: handler.ping
+    events:
+      - http:
+          path: ping
+          method: get
+
+  developers:
+    handler: handler.developers
+    events:
+      - http:
+          path: developers
+          method: get
+
+  repositories:
+    handler: handler.repositories
+    events:
+      - http:
+          path: repositories
+          method: get
+
+  languages:
+    handler: handler.languages
+    events:
+      - http:
+          path: languages
+          method: get
+
+  spoken_languages:
+    handler: handler.spoken_languages
+    events:
+      - http:
+          path: spoken_languages
+          method: get
